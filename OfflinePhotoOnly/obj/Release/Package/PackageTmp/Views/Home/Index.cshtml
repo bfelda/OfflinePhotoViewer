@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html manifest ="/Home/Manifest" lang ="en">
+<head>
+    <script type="text/javascript">
+        window.applicationCache.onupdateready = function (e) {
+            applicationCache.swapCache();
+            location.reload();
+        }
+    </script>
+    <link href="~/Content/SliderStyle.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div id="sliderDiv">
+    @foreach (string path in Model)
+    {
+        <img class="image" src="@path" />
+    }
+    </div>
+</body>
+</html>
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.9.0.min.js"></script>
+<script src="~/Scripts/prog/imageSlide.js"></script>
+

@@ -1,0 +1,12 @@
+﻿CACHE MANIFEST
+#version 0.0.2;
+CACHE:
+@Url.Action("Manifest", "Home")
+@Url.Content("~/Scripts/jquery-1.8.2.min.js" + Environment.NewLine)
+@Url.Content("~/Scripts/jquery-ui-1.9.0.min.js" + Environment.NewLine)
+@Url.Content("~/Scripts/prog/imageSlide.js" + Environment.NewLine)
+@Url.Content("~/Content/SliderStyle.css" + Environment.NewLine)
+@foreach (string path in Model)
+{
+    @Url.Content(path + Environment.NewLine)
+}
